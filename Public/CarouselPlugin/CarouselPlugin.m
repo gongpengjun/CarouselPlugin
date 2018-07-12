@@ -212,7 +212,7 @@
 {
     [self releaseViewTimer];
     if (!_viewTimer) {
-        _viewTimer = [WeakTimerTarget timerWithTimeInterval:(self.viewDwellTime+self.viewScrollTime) target:self selector:@selector(viewScroll) userInfo:nil repeats:YES];
+        _viewTimer = [WeakTimerTarget scheduledTimerWithTimeInterval:(self.viewDwellTime+self.viewScrollTime) target:self selector:@selector(viewScroll) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:_viewTimer forMode:NSRunLoopCommonModes];
     }
 }
