@@ -1,0 +1,20 @@
+PODS:
+  - BBWeakTimer (1.0.1)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - BBWeakTimer (= 1.0.1)
+  - Masonry
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BBWeakTimer
+    - Masonry
+
+SPEC CHECKSUMS:
+  BBWeakTimer: 10929ec366f05abd71731b971a0a0c63b9b6b5f5
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: f52d349230b805a9abd70e5ba92ba084fb7811a9
+
+COCOAPODS: 1.5.3

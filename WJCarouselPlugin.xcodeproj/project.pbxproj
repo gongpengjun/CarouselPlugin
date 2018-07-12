@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CB2391F4BFBCACB3FE38873 /* libPods-WJCarouselPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3708DEB2405566B766207D /* libPods-WJCarouselPlugin.a */; };
+		E075282520F7500300B6790B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E075282420F7500300B6790B /* AppDelegate.m */; };
+		E075282820F7500300B6790B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E075282720F7500300B6790B /* ViewController.m */; };
+		E075282B20F7500300B6790B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E075282920F7500300B6790B /* Main.storyboard */; };
+		E075282D20F7500600B6790B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E075282C20F7500600B6790B /* Assets.xcassets */; };
+		E075283020F7500600B6790B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E075282E20F7500600B6790B /* LaunchScreen.storyboard */; };
+		E075283320F7500600B6790B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E075283220F7500600B6790B /* main.m */; };
+		E075283E20F7506B00B6790B /* CarouselPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E075283A20F7506A00B6790B /* CarouselPlugin.m */; };
+		E075284820F7515700B6790B /* CarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = E075284620F7515700B6790B /* CarouselView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C3708DEB2405566B766207D /* libPods-WJCarouselPlugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WJCarouselPlugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		760D3C48C1E6DC41A53AC92B /* Pods-WJCarouselPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJCarouselPlugin.release.xcconfig"; path = "Pods/Target Support Files/Pods-WJCarouselPlugin/Pods-WJCarouselPlugin.release.xcconfig"; sourceTree = "<group>"; };
+		E075282020F7500300B6790B /* WJCarouselPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WJCarouselPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E075282320F7500300B6790B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E075282420F7500300B6790B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E075282620F7500300B6790B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E075282720F7500300B6790B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E075282A20F7500300B6790B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E075282C20F7500600B6790B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E075282F20F7500600B6790B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E075283120F7500600B6790B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E075283220F7500600B6790B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E075283A20F7506A00B6790B /* CarouselPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselPlugin.m; sourceTree = "<group>"; };
+		E075283C20F7506B00B6790B /* CarouselPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselPlugin.h; sourceTree = "<group>"; };
+		E075284520F7515600B6790B /* CarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselView.h; sourceTree = "<group>"; };
+		E075284620F7515700B6790B /* CarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselView.m; sourceTree = "<group>"; };
+		E075284920F7518800B6790B /* CarouselPluginDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarouselPluginDefine.h; sourceTree = "<group>"; };
+		EF6BFC08FA927D8EAAFFA78F /* Pods-WJCarouselPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJCarouselPlugin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WJCarouselPlugin/Pods-WJCarouselPlugin.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E075281D20F7500300B6790B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CB2391F4BFBCACB3FE38873 /* libPods-WJCarouselPlugin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8158BB2318F26E82989BEB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF6BFC08FA927D8EAAFFA78F /* Pods-WJCarouselPlugin.debug.xcconfig */,
+				760D3C48C1E6DC41A53AC92B /* Pods-WJCarouselPlugin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8C219E0581AE80717125425 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C3708DEB2405566B766207D /* libPods-WJCarouselPlugin.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E075281720F7500300B6790B = {
+			isa = PBXGroup;
+			children = (
+				E075282220F7500300B6790B /* WJCarouselPlugin */,
+				E075282120F7500300B6790B /* Products */,
+				C8158BB2318F26E82989BEB4 /* Pods */,
+				C8C219E0581AE80717125425 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E075282120F7500300B6790B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E075282020F7500300B6790B /* WJCarouselPlugin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E075282220F7500300B6790B /* WJCarouselPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				E075282320F7500300B6790B /* AppDelegate.h */,
+				E075282420F7500300B6790B /* AppDelegate.m */,
+				E075283920F7505000B6790B /* CarouselPlugin */,
+				E075282620F7500300B6790B /* ViewController.h */,
+				E075282720F7500300B6790B /* ViewController.m */,
+				E075284520F7515600B6790B /* CarouselView.h */,
+				E075284620F7515700B6790B /* CarouselView.m */,
+				E075284920F7518800B6790B /* CarouselPluginDefine.h */,
+				E075282920F7500300B6790B /* Main.storyboard */,
+				E075282C20F7500600B6790B /* Assets.xcassets */,
+				E075282E20F7500600B6790B /* LaunchScreen.storyboard */,
+				E075283120F7500600B6790B /* Info.plist */,
+				E075283220F7500600B6790B /* main.m */,
+			);
+			path = WJCarouselPlugin;
+			sourceTree = "<group>";
+		};
+		E075283920F7505000B6790B /* CarouselPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				E075283C20F7506B00B6790B /* CarouselPlugin.h */,
+				E075283A20F7506A00B6790B /* CarouselPlugin.m */,
+			);
+			name = CarouselPlugin;
+			path = ../Public/CarouselPlugin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E075281F20F7500300B6790B /* WJCarouselPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E075283620F7500600B6790B /* Build configuration list for PBXNativeTarget "WJCarouselPlugin" */;
+			buildPhases = (
+				23DFF03A5135EE055FCEE6B8 /* [CP] Check Pods Manifest.lock */,
+				E075281C20F7500300B6790B /* Sources */,
+				E075281D20F7500300B6790B /* Frameworks */,
+				E075281E20F7500300B6790B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WJCarouselPlugin;
+			productName = WJCarouselPlugin;
+			productReference = E075282020F7500300B6790B /* WJCarouselPlugin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E075281820F7500300B6790B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "wesk痕";
+				TargetAttributes = {
+					E075281F20F7500300B6790B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = E075281B20F7500300B6790B /* Build configuration list for PBXProject "WJCarouselPlugin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E075281720F7500300B6790B;
+			productRefGroup = E075282120F7500300B6790B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E075281F20F7500300B6790B /* WJCarouselPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E075281E20F7500300B6790B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E075283020F7500600B6790B /* LaunchScreen.storyboard in Resources */,
+				E075282D20F7500600B6790B /* Assets.xcassets in Resources */,
+				E075282B20F7500300B6790B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23DFF03A5135EE055FCEE6B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WJCarouselPlugin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E075281C20F7500300B6790B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E075282820F7500300B6790B /* ViewController.m in Sources */,
+				E075283E20F7506B00B6790B /* CarouselPlugin.m in Sources */,
+				E075283320F7500600B6790B /* main.m in Sources */,
+				E075282520F7500300B6790B /* AppDelegate.m in Sources */,
+				E075284820F7515700B6790B /* CarouselView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E075282920F7500300B6790B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E075282A20F7500300B6790B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E075282E20F7500600B6790B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E075282F20F7500600B6790B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E075283420F7500600B6790B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E075283520F7500600B6790B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E075283720F7500600B6790B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF6BFC08FA927D8EAAFFA78F /* Pods-WJCarouselPlugin.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B776HGZTR8;
+				INFOPLIST_FILE = WJCarouselPlugin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesk.WJCarouselPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E075283820F7500600B6790B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 760D3C48C1E6DC41A53AC92B /* Pods-WJCarouselPlugin.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B776HGZTR8;
+				INFOPLIST_FILE = WJCarouselPlugin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesk.WJCarouselPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E075281B20F7500300B6790B /* Build configuration list for PBXProject "WJCarouselPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E075283420F7500600B6790B /* Debug */,
+				E075283520F7500600B6790B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E075283620F7500600B6790B /* Build configuration list for PBXNativeTarget "WJCarouselPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E075283720F7500600B6790B /* Debug */,
+				E075283820F7500600B6790B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E075281820F7500300B6790B /* Project object */;
+}
