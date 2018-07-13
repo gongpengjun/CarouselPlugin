@@ -52,8 +52,6 @@ typedef NS_ENUM(NSInteger, ViewScrollDirection) {
 /** 初始化scrollView 设置frame和代理 滚动的视图大小等于frame.size**/
 - (void)loadScrollViewFrame:(CGRect)frame delegate:(id<CarouselPluginDelegate>)delegate;
 
-//- (void)setSubViewSize:(CGSize)size;
-
 /** 获取当前ScrollView **/
 - (UIScrollView *)currentScrollView;
 
