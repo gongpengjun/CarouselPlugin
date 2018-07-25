@@ -52,8 +52,7 @@
     if (self) {
         self.viewDwellTime = kViewDwellTimeInterval;
         self.viewScrollTime = KViewScrollTimeInterval;
-        self.dragEnable = YES;
-//        self.scrollView.userInteractionEnabled = self.dragEnable = YES;
+        self.dragEnable = NO;
         self.scrollDirection = ViewScrollDirectionUp;
         self.horizontalDir = NO;
     }
@@ -121,7 +120,7 @@
 
 - (void)setCurrentScrollDrag:(BOOL)dragEnable
 {
-    self.scrollView.userInteractionEnabled = dragEnable;
+    self.dragEnable = dragEnable;
 }
 
 - (void)setCurrentSubViewDwellTime:(CGFloat)time

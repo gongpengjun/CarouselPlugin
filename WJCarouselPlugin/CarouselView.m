@@ -47,10 +47,10 @@
     return self;
 }
 
-- (void)loadContentViewWithIndex:(NSInteger)index
+- (void)loadContentViewWithIndex:(NSInteger)index title:(NSString *)title
 {
-    _titleLabel.text = [NSString stringWithFormat:@"上拉下滑123456::::%ld",index];
-    _numLabel.text = @"X14";
+    _titleLabel.text = [NSString stringWithFormat:@"%@123456::::%ld",title,index];
+    _numLabel.text = [NSString stringWithFormat:@"X%ld",index+10];
     [_titleLabel sizeToFit];
     [_numLabel sizeToFit];
 }

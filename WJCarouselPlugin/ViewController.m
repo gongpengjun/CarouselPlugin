@@ -64,7 +64,24 @@
 - (void)reloadCurrentView:(UIView *)view viewForIndex:(NSInteger)index
 {
     CarouselView *contentview = (CarouselView *)view;
-    [contentview loadContentViewWithIndex:index];
+    NSString *title = nil;
+    if ([contentview.superview isEqual:self.scrollBottomView]) {
+        title = @"向右👉";
+    }
+    else if ([contentview.superview isEqual:self.scrollBottomView1])
+    {
+        title = @"向左👈";
+    }
+    else if ([contentview.superview isEqual:self.scrollBottomView2])
+    {
+        title = @"向上👆";
+    }
+    else
+    {
+        title = @"向下👇";
+    }
+    [contentview loadContentViewWithIndex:index title:title];
+
 }
 
 - (UIView *)carouselPlugin:(CarouselPlugin *)carouselPlugin viewForIndex:(NSInteger)index
