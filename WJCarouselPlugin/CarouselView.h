@@ -10,6 +10,6 @@
 
 @interface CarouselView : UIView
 
-- (void)loadContentViewWithIndex:(NSInteger)index title:(NSString *)title;
+- (void)updateContentViewWithTitle:(NSString *)title;
 
 @end

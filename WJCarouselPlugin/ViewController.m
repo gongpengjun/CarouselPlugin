@@ -1,9 +1,5 @@
 //
 //  ViewController.m
-//  WJCarouselPlugin
-//
-//  Created by wujian on 2018/7/12.
-//  Copyright © 2018年 wesk痕. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -11,135 +7,57 @@
 #import "CarouselView.h"
 #import "CarouselPluginDefine.h"
 
-#define KScrollBottomViewHeight 15
+#define KScrollBottomViewHeight 50
 
 @interface ViewController ()<CarouselPluginDelegate>
-
 @property (nonatomic, strong) CarouselPlugin *carouselPlugin;
 @property (nonatomic, strong) UIScrollView *scrollBottomView;
-
-@property (nonatomic, strong) CarouselPlugin *carouselPlugin1;
-@property (nonatomic, strong) UIScrollView *scrollBottomView1;
-
-@property (nonatomic, strong) CarouselPlugin *carouselPlugin2;
-@property (nonatomic, strong) UIScrollView *scrollBottomView2;
-
-@property (nonatomic, strong) CarouselPlugin *carouselPlugin3;
-@property (nonatomic, strong) UIScrollView *scrollBottomView3;
-
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    _scrollBottomView = [self.carouselPlugin currentScrollView];
+    self.carouselPlugin = [CarouselPlugin new];
+    [self.carouselPlugin setCurrentScrollDirection:ViewScrollDirectionUp];
+    [self.carouselPlugin setCurrentSubViewDwellTime:1];
+    [self.carouselPlugin setCurrentSubViewScrollTime:1];
+    [self.carouselPlugin setViewScrollAnimationOptions:UIViewAnimationOptionCurveEaseOut];
+    [self.carouselPlugin loadScrollViewFrame:CGRectMake(15, 300, SCREEN_WIDTH-30, KScrollBottomViewHeight) delegate:self];
+    
+    self.scrollBottomView = [self.carouselPlugin currentScrollView];
+    self.scrollBottomView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.scrollBottomView];
-    [_carouselPlugin startRefreshScollView];
-
     
-    _scrollBottomView1 = [self.carouselPlugin1 currentScrollView];
-    [self.view addSubview:self.scrollBottomView1];
-    [_carouselPlugin1 startRefreshScollView];
-    
-    _scrollBottomView2 = [self.carouselPlugin2 currentScrollView];
-    [self.view addSubview:self.scrollBottomView2];
-    [_carouselPlugin2 startRefreshScollView];
-    
-    
-    _scrollBottomView3 = [self.carouselPlugin3 currentScrollView];
-    [self.view addSubview:self.scrollBottomView3];
-    [_carouselPlugin3 startRefreshScollView];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.carouselPlugin startRefreshScollView];
 }
 
 #pragma mark - CarouselPluginDelegate
-
-- (void)reloadCurrentView:(UIView *)view viewForIndex:(NSInteger)index
-{
-    CarouselView *contentview = (CarouselView *)view;
-    NSString *title = nil;
-    if ([contentview.superview isEqual:self.scrollBottomView]) {
-        title = @"向右👉";
-    }
-    else if ([contentview.superview isEqual:self.scrollBottomView1])
-    {
-        title = @"向左👈";
-    }
-    else if ([contentview.superview isEqual:self.scrollBottomView2])
-    {
-        title = @"向上👆";
-    }
-    else
-    {
-        title = @"向下👇";
-    }
-    [contentview loadContentViewWithIndex:index title:title];
-
-}
-
-- (UIView *)carouselPlugin:(CarouselPlugin *)carouselPlugin viewForIndex:(NSInteger)index
-{
-    CarouselView *contentview = [[CarouselView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH-30, KScrollBottomViewHeight)];
-    return contentview;
-}
 
 - (NSInteger)numberOfViewsInCarouselPlugin:(CarouselPlugin *)carouselPlugin
 {
     return 2;
 }
 
-
-#pragma mark - setter/getter
-- (CarouselPlugin *)carouselPlugin
+- (UIView *)carouselPlugin:(CarouselPlugin *)carouselPlugin viewForIndex:(NSInteger)index
 {
-    if (!_carouselPlugin) {
-        _carouselPlugin = [CarouselPlugin new];
-        [_carouselPlugin setCurrentScrollDirection:ViewScrollDirectionRight];
-        [_carouselPlugin setCurrentSubViewScrollTime:5];
-        [_carouselPlugin setCurrentSubViewDwellTime:1];
-        [_carouselPlugin loadScrollViewFrame:CGRectMake(15, 100, SCREEN_WIDTH-30, KScrollBottomViewHeight) delegate:self];
-    }
-    return _carouselPlugin;
+    CarouselView *contentview = [[CarouselView alloc] initWithFrame:CGRectMake(0, 100, SCREEN_WIDTH-30, KScrollBottomViewHeight)];
+    NSLog(@"index: %@, contentview: %p",@(index), contentview);
+    return contentview;
 }
 
-- (CarouselPlugin *)carouselPlugin1
+- (void)reloadCurrentView:(UIView *)view viewForIndex:(NSInteger)index
 {
-    if (!_carouselPlugin1) {
-        _carouselPlugin1 = [CarouselPlugin new];
-        [_carouselPlugin1 setCurrentScrollDirection:ViewScrollDirectionLeft];
-        [_carouselPlugin1 setCurrentSubViewScrollTime:3];
-        [_carouselPlugin1 setCurrentScrollDrag:YES];
-        [_carouselPlugin1 loadScrollViewFrame:CGRectMake(15, 200, SCREEN_WIDTH-30, KScrollBottomViewHeight) delegate:self];
+    NSLog(@"index: %@, view: %p",@(index), view);
+    CarouselView *contentview = (CarouselView *)view;
+    if (index % 2 == 0) {
+        [contentview updateContentViewWithTitle:@"Searching trips"];
+        //contentview.backgroundColor = [UIColor greenColor];
+    } else {
+        [contentview updateContentViewWithTitle:@"You are online"];
+        //contentview.backgroundColor = [UIColor redColor];
     }
-    return _carouselPlugin1;
-}
-
-- (CarouselPlugin *)carouselPlugin2
-{
-    if (!_carouselPlugin2) {
-        _carouselPlugin2 = [CarouselPlugin new];
-        [_carouselPlugin2 loadScrollViewFrame:CGRectMake(15, 300, SCREEN_WIDTH-30, KScrollBottomViewHeight) delegate:self];
-    }
-    return _carouselPlugin2;
-}
-
-- (CarouselPlugin *)carouselPlugin3
-{
-    if (!_carouselPlugin3) {
-        _carouselPlugin3 = [CarouselPlugin new];
-        [_carouselPlugin3 setCurrentScrollDirection:ViewScrollDirectionDown];
-        [_carouselPlugin3 setCurrentSubViewScrollTime:0.5];
-        [_carouselPlugin3 setCurrentSubViewDwellTime:2];
-        [_carouselPlugin3 loadScrollViewFrame:CGRectMake(15, 400, SCREEN_WIDTH-30, KScrollBottomViewHeight) delegate:self];
-    }
-    return _carouselPlugin3;
 }
 
 @end

@@ -11,11 +11,7 @@
 #import <Masonry.h>
 
 @interface CarouselView ()
-
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIImageView *gemImageView;
-@property (nonatomic, strong) UILabel *numLabel;
-
 @end
 
 @implementation CarouselView
@@ -24,64 +20,23 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:self.titleLabel];
-        [self addSubview:self.gemImageView];
-        [self addSubview:self.numLabel];
-        
+        _titleLabel = [UILabel new];
+        _titleLabel.textColor = RGBCOLOR(102, 102, 102);
+        _titleLabel.font = kFont(40);
+        _titleLabel.textColor = [UIColor colorWithRed:0x18/255.0f green:0xC4/255.0f blue:0x7C/255.0f alpha:1];
+        [self addSubview:_titleLabel];
+
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(10);
-            make.centerY.equalTo(self);
-        }];
-        
-        [_gemImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.titleLabel.mas_right).offset(5);
-            make.centerY.equalTo(self.titleLabel);
-            make.size.mas_equalTo(CGSizeMake(10, 10));
-        }];
-        
-        [_numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.gemImageView.mas_right).offset(2);
-            make.centerY.equalTo(self.titleLabel);
+            make.center.equalTo(self);
         }];
     }
     return self;
 }
 
-- (void)loadContentViewWithIndex:(NSInteger)index title:(NSString *)title
+- (void)updateContentViewWithTitle:(NSString *)title
 {
-    _titleLabel.text = [NSString stringWithFormat:@"%@123456::::%ld",title,index];
-    _numLabel.text = [NSString stringWithFormat:@"X%ld",index+10];
+    _titleLabel.text = title;
     [_titleLabel sizeToFit];
-    [_numLabel sizeToFit];
 }
 
-#pragma mark - setter/getter
-- (UILabel *)titleLabel
-{
-    if (!_titleLabel) {
-        _titleLabel = [UILabel new];
-        _titleLabel.textColor = RGBCOLOR(102, 102, 102);
-        _titleLabel.font = kFont(12);
-    }
-    return _titleLabel;
-}
-
-- (UIImageView *)gemImageView
-{
-    if (!_gemImageView) {
-        _gemImageView = [UIImageView new];
-        _gemImageView.image = [UIImage imageNamed:@"gem"];
-    }
-    return _gemImageView;
-}
-
-- (UILabel *)numLabel
-{
-    if (!_numLabel) {
-        _numLabel = [UILabel new];
-        _numLabel.textColor = RGBCOLOR(102, 102, 102);
-        _numLabel.font = kFont(11);
-    }
-    return _numLabel;
-}
 @end
