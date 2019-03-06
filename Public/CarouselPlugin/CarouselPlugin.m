@@ -39,7 +39,8 @@
 @property (nonatomic, assign) CGFloat viewDwellTime;
 /** 页面滚动的时间 **/
 @property (nonatomic, assign) CGFloat viewScrollTime;
-
+/** 页面滚动的动画选项 **/
+@property (nonatomic, assign) UIViewAnimationOptions animationOptions;
 @end
 
 #define kViewDwellTimeInterval 3
@@ -55,6 +56,7 @@
         self.dragEnable = NO;
         self.scrollDirection = ViewScrollDirectionUp;
         self.horizontalDir = NO;
+        self.animationOptions = UIViewAnimationOptionCurveLinear;
     }
     return self;
 }
@@ -131,6 +133,11 @@
 - (void)setCurrentSubViewScrollTime:(CGFloat)time
 {
     self.viewScrollTime = time;
+}
+
+- (void)setViewScrollAnimationOptions:(UIViewAnimationOptions)options
+{
+    self.animationOptions = options;
 }
 
 - (void)loadScrollViewFrame:(CGRect)frame delegate:(id<CarouselPluginDelegate>)delegate
@@ -230,7 +237,7 @@
 
 - (void)viewScroll
 {
-    [UIView animateWithDuration:self.viewScrollTime delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:self.viewScrollTime delay:0 options:self.animationOptions animations:^{
         switch (self.scrollDirection) {
             case ViewScrollDirectionLeft:
                 [self.scrollView setContentOffset:CGPointMake(self.scrollViewSize.width*2, 0) animated:NO];

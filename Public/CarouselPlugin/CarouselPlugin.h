@@ -49,6 +49,9 @@ typedef NS_ENUM(NSInteger, ViewScrollDirection) {
 /** 页面朝着某个方向滚动的时间 默认是0.3秒 **/
 - (void)setCurrentSubViewScrollTime:(CGFloat)time;
 
+/** 页面滚动的动画选项 **/
+- (void)setViewScrollAnimationOptions:(UIViewAnimationOptions)options;
+
 /** 初始化scrollView 设置frame和代理 滚动的视图大小等于frame.size**/
 - (void)loadScrollViewFrame:(CGRect)frame delegate:(id<CarouselPluginDelegate>)delegate;
 
